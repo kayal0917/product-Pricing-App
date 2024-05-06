@@ -8,7 +8,7 @@ import com.chainsys.dao.ProductTabb;
 import com.chainsys.dao.Userlog;
 import com.chainsys.dao.productses;
 
-public class UserProduct {
+public class UserProduct extends Userlog{
 
 	public static void main(String[] arg) throws ClassNotFoundException, SQLException {
 
@@ -36,24 +36,26 @@ public class UserProduct {
 
 		if (r.equals(r1)) {
 			p.m2();
+//			p.m2();
 //			p.update1(address);
 		} else if (r.equals(r2)) {
 			Userlog u = new Userlog();
 //			u.detailss();
-			
 			u.login();
+//			u.login();
+			
 			p.m2();
 		}
 
 	}
 
-	public static void priceCalculation(int price, int quantity) {
+	public static double priceCalculation(int price, int quantity) {
 		int totalPrice;
 
 		totalPrice = price * quantity;
 
 		double discount = totalPrice * 0.15;
 		System.out.println("original price : " + totalPrice + " Discounted price : " + (totalPrice - discount));
-
+		return totalPrice - discount ;
 	}
 }

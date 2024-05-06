@@ -19,7 +19,7 @@ public class Userlog {
 	        String username = scanner.nextLine();
 	        return username;
 	    }
-	    private static String inputPassword() {
+	    public static String inputPassword() {
 	        Scanner scanner = new Scanner(System.in);
 	        System.out.print("Enter password: ");
 	        String password = scanner.nextLine();
