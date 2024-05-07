@@ -4,6 +4,7 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
+import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class loginconnection {
@@ -32,6 +33,7 @@ public class loginconnection {
 		
 		
 		public static void insertlogin(String username,String password) throws ClassNotFoundException, SQLException {
+		
 	        Connection connection = loginconnection.getConnection();
 
 	        String insertQuery = "INSERT INTO productusers (username, password) VALUES (?, ?)";
@@ -42,6 +44,9 @@ public class loginconnection {
 	        int rows = preparedStatement.executeUpdate();
 	        System.out.println(rows + " rows inserted");
 	    }
+		
+		
+		
 		
 
 		public static Connection getConnection() throws ClassNotFoundException, SQLException {

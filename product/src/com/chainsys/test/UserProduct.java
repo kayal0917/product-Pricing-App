@@ -7,6 +7,7 @@ import com.chainsys.dao.ProductDetails;
 import com.chainsys.dao.ProductTabb;
 import com.chainsys.dao.Userlog;
 import com.chainsys.dao.productses;
+import com.chainsys.util.Userconnection;
 
 public class UserProduct extends Userlog{
 
@@ -36,12 +37,13 @@ public class UserProduct extends Userlog{
 
 		if (r.equals(r1)) {
 			p.m2();
+			Userconnection.update1(p.name);
 //			p.m2();
 //			p.update1(address);
 		} else if (r.equals(r2)) {
-			Userlog u = new Userlog();
+//			Userlog u = new Userlog();
 //			u.detailss();
-			u.login();
+			Userlog.logins();
 //			u.login();
 			
 			p.m2();

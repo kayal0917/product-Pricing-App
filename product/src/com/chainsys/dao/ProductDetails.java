@@ -3,6 +3,7 @@ package com.chainsys.dao;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
+import java.util.InputMismatchException;
 import java.util.Scanner;
 
 import com.chainsys.test.UserProduct;
@@ -20,7 +21,9 @@ public class ProductDetails extends UserProduct {
 		System.out.println("Enter a number to choose a product:");
 		System.out.println("1. MOBILE");
 		System.out.println("2. LAPTOP");
-		int choice = scan.nextInt();
+		try {
+			int choice = scan.nextInt();
+		
 		char ch = 'y';
 		if (choice == 1 || choice == 2) {
 			switch (choice) {
@@ -48,7 +51,13 @@ public class ProductDetails extends UserProduct {
 							System.out.println("Enter Your Details:");
 							System.out.println(" ");
 							System.out.println("Enter your name");
-							String name1 = scan.next();
+//							try {
+								String name1 = scan.next();
+//							}
+//							catch(InputMismatchException n){
+//								n.getMessage();
+//							}
+//							}
 							System.out.println("Enter your address : ");
 							String address = scan.next();
 //							System.out.println("Enter your password : ");
@@ -500,7 +509,10 @@ public class ProductDetails extends UserProduct {
 				}
 			}
 		}
-
+		}
+		catch(InputMismatchException p) {
+		System.out.println("invalid choice");
+		}
 	}
 }
 
