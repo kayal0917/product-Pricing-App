@@ -5,7 +5,7 @@ import java.util.Scanner;
 public class Userlog {
  public static void logins() {
 	 Scanner sc = new Scanner(System.in);
-	 String usernameRegex = "[a-zA-Z0-9]"; 
+	 String usernameRegex = "[a-zA-Z]"; 
      String passwordRegex = "[a-zA-Z0-9]"; 
 	 System.out.println("Enter your username");
 	 String enteredUsername = sc.next();

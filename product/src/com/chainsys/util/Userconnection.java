@@ -71,17 +71,17 @@ public class Userconnection extends ProductDetails{
         int rows = preparedStatement.executeUpdate();
         System.out.println(rows + " rows inserted");
     }
-	public static void update1(String name) throws ClassNotFoundException, SQLException{         
-        Connection connection = Userconnection.getConnection();
-      System.out.println(connection);
-      System.out.println("Updated userName:-");
-      System.out.println(name);
-      String save="UPDATE productuserss SET name=? WHERE id=10";
-      PreparedStatement prepareStatement = connection.prepareStatement(save);
-      prepareStatement.setString(1, name);
-      int rows = prepareStatement.executeUpdate();
-      System.out.println(rows+" updated");
-  }
+//	public static void update1(String name1) throws ClassNotFoundException, SQLException{         
+//        Connection connection = Userconnection.getConnection();
+//      System.out.println(connection);
+//      System.out.println("Updated userName:-");
+//      System.out.println(name1);
+//      String save="UPDATE productuserss SET name=? WHERE id=10";
+//      PreparedStatement prepareStatement = connection.prepareStatement(save);
+//      prepareStatement.setString(1, name1);
+//      int rows = prepareStatement.executeUpdate();
+//      System.out.println(rows+" updated");
+//  }
 
 	
 

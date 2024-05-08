@@ -13,6 +13,7 @@ public class ProductDetails extends UserProduct {
 
 	private static String address;
 	public static int ONEPLUSqty;
+	public static String name;
 
 	public void m2() throws ClassNotFoundException, SQLException {
 		Scanner scan = new Scanner(System.in);
