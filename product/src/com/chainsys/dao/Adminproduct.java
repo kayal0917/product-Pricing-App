@@ -8,6 +8,8 @@ import java.util.Scanner;
 import com.chainsys.util.Adminconnection;
 
 public class Adminproduct {
+	public static String adminuser1 = "kayal17";
+	public static String Password1 = "123@";
 
     public static void login() throws ClassNotFoundException, SQLException {
 
@@ -19,17 +21,17 @@ public class Adminproduct {
 		System.out.print("Enter your username: ");
 		String username = scanner.nextLine();
 
-//		try {
-//		}
-//		catch(InputMismatchException p) {
-//		System.out.println("invalid choice");
-//		}
+		try {
+		}
+		catch(InputMismatchException p) {
+		System.out.println("invalid choice");
+		}
 		System.out.print("Enter your password: ");
 		String password = scanner.nextLine();
 		if (username.equals(adminuser1) && password.equals(Password1)) {
 			System.out.println("Welcome");
 			Adminconnection admin1=new Adminconnection();
-			admin1.admininsert(username, password);
+			admin1.admininsert(username,password);
 		} 
 		
 		else{
